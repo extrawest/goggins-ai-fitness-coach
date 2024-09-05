@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen:supabase:types": "touch ./lib/generated/db.ts && supabase gen types typescript --schema public > ./lib/generated/db.ts --project-id yrdbppvlqlzycpqjlaqi"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.4.1",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@supabase/supabase-js": "^2.45.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.438.0",
@@ -19,6 +21,7 @@
     "openai": "^4.57.1",
     "react": "^18",
     "react-dom": "^18",
+    "supabase": "^1.191.3",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },
