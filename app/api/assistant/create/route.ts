@@ -1,3 +1,4 @@
+import { supabase } from "@/lib/supabasedb";
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
@@ -35,6 +36,9 @@ export async function POST() {
             `,
         })
         console.log(assistant);
+        await supabase.from('assistant').insert({
+            assistant_id: assistant?.id
+        })
         return NextResponse.json(
             { assistant },
             { status: 201 })
