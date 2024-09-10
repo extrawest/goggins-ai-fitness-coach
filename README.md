@@ -21,4 +21,4 @@ This AI-powered fitness assistant is designed to emulate coaching style of David
 - npm run dev
 - open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Deploy available [here](https://goggins-ai-coach-edf3jcgzf-marias-projects-daaf1e42.vercel.app/)
+Deploy available [here](https://goggins-ai-coach-b840jeeym-marias-projects-daaf1e42.vercel.app/)
