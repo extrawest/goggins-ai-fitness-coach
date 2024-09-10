@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { UserButton } from "@clerk/nextjs";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+import { UserButton } from '@clerk/nextjs';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React from 'react';
 
 const routes = [
   {
-    name: "Chat",
-    path: "/",
+    name: 'Chat',
+    path: '/',
   },
   {
-    name: "Profile",
-    path: "/profile",
+    name: 'Profile',
+    path: '/profile',
   },
 ];
 
@@ -20,7 +20,7 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="p-4 flex flex-row justify-between items-center bg-black text-white ">
+    <div className="w-full left-0 right-0 top-0 p-4 flex flex-row justify-between items-center bg-black text-white fixed">
       <Link href="/">
         <h1 className="text-2xl font-bold">Goggins AI</h1>
       </Link>
@@ -29,9 +29,7 @@ function Navbar() {
           <Link
             key={idx}
             href={route.path}
-            className={
-              pathname === route.path ? "border-b-2 border-yellow-500" : ""
-            }
+            className={pathname === route.path ? 'border-b-2 border-yellow-500' : ''}
           >
             {route.name}
           </Link>

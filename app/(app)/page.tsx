@@ -81,6 +81,7 @@ function ChatPage() {
         if (run.status === 'completed') {
           clearInterval(intervalId);
           setPolling(false);
+          scrollPage();
           await fetchMessages();
           return;
         } else if (run.status === 'failed') {
@@ -122,6 +123,7 @@ function ChatPage() {
         return;
       }
       setMessages([...messages, newMessages]);
+      scrollPage();
       setMessage('');
       toast.success('Message sent');
 
