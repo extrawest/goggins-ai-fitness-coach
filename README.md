@@ -17,6 +17,7 @@ This AI-powered fitness assistant is designed to emulate coaching style of David
 
 - clone repository
 - npm i
+- create .env file and add variables from .env.dist with their values
 - npm run dev
 - open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
