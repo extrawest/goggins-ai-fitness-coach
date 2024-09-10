@@ -5,3 +5,11 @@ export const supabase = createClient<Database>(
   process.env.SUPABASE_URL ?? '',
   process.env.SUPABASE_ANON_KEY ?? ''
 )
+
+export interface ChallanePreferances {
+  challange_id: string | null
+  created_at: string | null
+  id: string
+  send_notification: boolean | null
+  user_id: string | null
+} 

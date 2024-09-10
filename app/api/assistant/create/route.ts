@@ -1,15 +1,15 @@
-import { supabase } from "@/lib/supabasedb";
-import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { supabase } from '@/lib/supabasedb';
+import { NextResponse } from 'next/server';
+import OpenAI from 'openai';
 
 export async function POST() {
-    const openai = new OpenAI();
+  const openai = new OpenAI();
 
-    try {
-        const assistant = await openai.beta.assistants.create({
-            model: 'gpt-4o-mini',
-            name: "Goggins AI Coach",
-            instructions: `
+  try {
+    const assistant = await openai.beta.assistants.create({
+      model: 'gpt-4o-mini',
+      name: 'Goggins AI Coach',
+      instructions: `
             Prompt: "Create an AI assistant that responds to user queries about their progress in the workout plan designed in the style of David Goggins. The assistant should respond in an exaggerated, intense version of Goggins' style, using his known phrases and a confrontational tone. It should both acknowledge the user's efforts and push them to go further, always emphasizing that they are capable of more. Responses should be direct, motivational, and slightly over the top, reflecting the never-satisfied, always-striving philosophy of Goggins."
       
               Input Expectations: The assistant can expect queries such as:
@@ -34,18 +34,14 @@ export async function POST() {
               The assistant should never encourage unsafe practices or disregard for personal health and well-being.
               The assistant should be supportive but also challenging, reflecting Goggins' philosophy of continuous self-improvement and resilience.
             `,
-        })
-        console.log(assistant);
-        await supabase.from('assistant').insert({
-            assistant_id: assistant?.id
-        })
-        return NextResponse.json(
-            { assistant },
-            { status: 201 })
-    } catch(e) {
-        console.error(e);
-        return NextResponse.json(
-            { e },
-            { status: 500 })
-    }
+    });
+    console.log(assistant);
+    await supabase.from('assistant').insert({
+      assistant_id: assistant?.id,
+    });
+    return NextResponse.json({ assistant }, { status: 201 });
+  } catch (e) {
+    console.error(e);
+    return NextResponse.json({ e }, { status: 500 });
+  }
 }

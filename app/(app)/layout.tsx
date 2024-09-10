@@ -3,7 +3,6 @@ import { assistantAtom, AssistantDto, userThreadAtom } from "@/atoms";
 import Navbar from "@/components/Navbar";
 import axios from "axios";
 import { useAtom } from "jotai";
-import { Assistant } from "openai/resources/beta/assistants.mjs";
 import { Message } from "openai/resources/beta/threads/messages.mjs";
 import { useEffect } from "react";
 import toast from "react-hot-toast";

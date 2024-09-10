@@ -27,6 +27,30 @@ export type Database = {
         }
         Relationships: []
       }
+      challange_prefereces: {
+        Row: {
+          challange_id: string | null
+          created_at: string | null
+          id: string
+          send_notification: boolean | null
+          user_id: string | null
+        }
+        Insert: {
+          challange_id?: string | null
+          created_at?: string | null
+          id?: string
+          send_notification?: boolean | null
+          user_id?: string | null
+        }
+        Update: {
+          challange_id?: string | null
+          created_at?: string | null
+          id?: string
+          send_notification?: boolean | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       user_thread: {
         Row: {
           created_at: string | null

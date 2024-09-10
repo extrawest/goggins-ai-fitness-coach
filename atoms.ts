@@ -1,5 +1,4 @@
 import { atom } from "jotai";
-import { Assistant } from "openai/resources/beta/assistants.mjs";
 import { Message } from "openai/src/resources/beta/threads/messages.js";
 
 export interface AssistantDto  {
