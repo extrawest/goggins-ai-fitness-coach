@@ -2,6 +2,8 @@
 
 This AI-powered fitness assistant is designed to emulate coaching style of David Goggins. Users can chat with the assistant to receive workout recommendations, fitness advice, and motivation delivered in the same intense, motivational manner as Goggins. Whether you're looking for a high-intensity workout plan or mental toughness tips, this assistant pushes you to go beyond your limits, just like Goggins himself.
 
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXB3d3lsdnVlMW1kNHJldGhkanpsNnB0bXV1azAyOHN6YWllemZ4MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uARKEG90PrEOoBSMbd/giphy.gif)
+
 ## Technologies
 
 - Nest JS
